@@ -102,14 +102,14 @@ app.use(express.json());
 // Routes
 app.use('/notifications', notificationRoutes);
 app.post('/notifications', (req, res) => {
-  console.log("✅ Request body:", req.body);  // You’ll see this in your terminal
+  console.log("Request body:", req.body);  // You’ll see this in your terminal
   res.status(200).json({ message: "Received!" });
 });
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`🚀 Server running at http://localhost:${PORT}`);
-  console.log(`📄 Swagger docs available at http://localhost:${PORT}/api-docs`);
+  console.log(`Server running at http://localhost:${PORT}`);
+  console.log(`Swagger docs available at http://localhost:${PORT}/api-docs`);
 });
 
 

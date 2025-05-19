@@ -22,8 +22,8 @@ export const sendSMS = async (to: string, body: string) => {
   try {
     const message = await client.messages.create({
       body,
-      from:'+18575753234',  // Twilio verified US number
-      to: '+918377880665'            // The recipient's verified number
+      from:  process.env.TWILIO_PHONE,
+      to, // The recipient's verified number
     });
     console.log('SMS sent:', message.sid);
   } catch (err) {
